@@ -2,7 +2,7 @@
 
 # Loops
 
-Track open Slack threads and conversation commitments — so Claude Code does the follow-up, not you.
+Track open Slack threads and conversation commitments - so Claude Code does the follow-up, not you.
 
 ---
 
@@ -27,7 +27,7 @@ You're the target user if:
 
 ## How It Helps
 
-Loops offloads conversation tracking to Claude Code. Instead of mentally juggling which threads need a reply, which are parked waiting on someone else, and which have quietly resolved — Claude tracks all of it for you.
+Loops offloads conversation tracking to Claude Code. Instead of mentally juggling which threads need a reply, which are parked waiting on someone else, and which have quietly resolved - Claude tracks all of it for you.
 
 You open a loop when you get pulled into a conversation that will require follow-up. Claude logs it, assigns keywords, and maintains a live registry. At any point you can ask Claude what's open, what's urgent, and what's been resolved.
 
@@ -35,18 +35,18 @@ You open a loop when you get pulled into a conversation that will require follow
 
 ## The Value
 
-- **Zero dropped threads** — every open conversation is logged until explicitly closed
-- **Instant situational awareness** — ask Claude for a status snapshot at any time
-- **Clear ownership** — each loop has a defined blocker: you or someone else
-- **Durable record** — closed loops are never deleted; they're a searchable archive of decisions
-- **Low overhead** — paste a conversation, describe what's needed, and you have a loop
+- **Zero dropped threads** - every open conversation is logged until explicitly closed
+- **Instant situational awareness** - ask Claude for a status snapshot at any time
+- **Clear ownership** - each loop has a defined blocker: you or someone else
+- **Durable record** - closed loops are never deleted; they're a searchable archive of decisions
+- **Low overhead** - paste a conversation, describe what's needed, and you have a loop
 
 ---
 
 ## Use Cases
 
 **Fielding async decisions as a PM**
-You're tagged in a Slack thread about whether to proceed with a feature scope change. You weigh in but need a decision from engineering lead before you can close it. You open a loop marked `Waiting` — when the reply comes in, you close it with the outcome logged.
+You're tagged in a Slack thread about whether to proceed with a feature scope change. You weigh in but need a decision from engineering lead before you can close it. You open a loop marked `Waiting` - when the reply comes in, you close it with the outcome logged.
 
 **Managing a cross-team incident**
 An ops issue surfaces in three separate Slack threads with different stakeholders. You open one loop that captures all three, track who owns the resolution, and mark it closed once the post-mortem is complete.
@@ -83,9 +83,9 @@ Loops is designed around MCP (Model Context Protocol) tool integrations so Claud
 - Claude can now read Slack threads directly when you ask it to open or update a loop
 
 **Other integrations also work:**
-- **Jira MCP** — for teams where work discussions happen in Jira comments or linked tickets
-- **Linear MCP** — for product teams tracking work in Linear issues and comments
-- **Other messengers** — any tool with an MCP server (Teams, Discord, etc.) follows the same pattern
+- **Jira MCP** - for teams where work discussions happen in Jira comments or linked tickets
+- **Linear MCP** - for product teams tracking work in Linear issues and comments
+- **Other messengers** - any tool with an MCP server (Teams, Discord, etc.) follows the same pattern
 
 You don't need all of them. Start with the one tool where most of your loops originate.
 
@@ -96,11 +96,11 @@ In your first Claude Code session, paste a real Slack conversation (or ticket th
 > "Here's a Slack thread I'm involved in. Please open a loop for it."
 
 Claude will:
-1. Create `L01` — your first loop file in `/Loops/`
+1. Create `L01` - your first loop file in `/Loops/`
 2. Add it to the registry in `LOOPS.md` with status `Open` or `Waiting`
 3. Generate keywords automatically based on the conversation content
 
-You can — and should — refine the keywords in the `Keywords Index` section of `LOOPS.md` to make future searches more accurate.
+You can - and should - refine the keywords in the `Keywords Index` section of `LOOPS.md` to make future searches more accurate.
 
 ---
 
@@ -110,12 +110,12 @@ Every loop has three states:
 
 | Status | Meaning |
 |--------|---------|
-| `Open` | You need to act — ball is in your court |
+| `Open` | You need to act - ball is in your court |
 | `Waiting` | You acted, now waiting on someone else |
 | `Closed` | Resolved, no further action needed |
 
-Loops are tracked in `LOOPS.md` — a registry table that stays up to date as conversations evolve. Each loop also has its own file in `/Loops/` with a full entry history, so you can see how a thread progressed from start to resolution.
+Loops are tracked in `LOOPS.md` - a registry table that stays up to date as conversations evolve. Each loop also has its own file in `/Loops/` with a full entry history, so you can see how a thread progressed from start to resolution.
 
-Loops are numbered per month: `YY-MM L01`, `YY-MM L02`, and so on. The counter resets each month. Closed loops are never deleted — they're moved to the Closed table and kept as a permanent record.
+Loops are numbered per month: `YY-MM L01`, `YY-MM L02`, and so on. The counter resets each month. Closed loops are never deleted - they're moved to the Closed table and kept as a permanent record.
 
 For the full working rules, see [LOOPS.md](LOOPS.md).
