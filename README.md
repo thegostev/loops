@@ -1,4 +1,4 @@
-![Uploading Gemini_Generated_Image_nhda9enhda9enhda.png…]()
+<img width="2816" height="1536" alt="loops_by_alex_gostev" src="https://github.com/user-attachments/assets/59acc66a-cfef-482f-8ebb-69d96c794929" />
 
 [![Claude Code](https://img.shields.io/badge/Claude_Code-compatible-8B5CF6?logo=anthropic&logoColor=white)](https://claude.ai/code) [![Claude](https://img.shields.io/badge/Claude-co--work-8B5CF6?logo=anthropic&logoColor=white)](https://claude.ai) [![Slack](https://img.shields.io/badge/Slack-integrated-4A154B?logo=slack&logoColor=white)](https://slack.com) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
