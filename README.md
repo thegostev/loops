@@ -1,3 +1,5 @@
+![Uploading Gemini_Generated_Image_nhda9enhda9enhda.png…]()
+
 [![Claude Code](https://img.shields.io/badge/Claude_Code-compatible-8B5CF6?logo=anthropic&logoColor=white)](https://claude.ai/code) [![Claude](https://img.shields.io/badge/Claude-co--work-8B5CF6?logo=anthropic&logoColor=white)](https://claude.ai) [![Slack](https://img.shields.io/badge/Slack-integrated-4A154B?logo=slack&logoColor=white)](https://slack.com) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # Loops
