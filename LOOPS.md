@@ -1,8 +1,9 @@
 # Loops
 
-Loops are open conversation threads or action items where you have been pulled in ("looped in") and need to follow up. Each loop tracks a specific thread from creation to resolution.
+> **Last scanned:** _not yet scanned_
+> **Scan config:** [[slack-sources]]
 
-## Rules for Working with Loops
+## Rules
 
 **Before creating a new loop:**
 
@@ -14,7 +15,7 @@ Loops are open conversation threads or action items where you have been pulled i
 
 1. Open the loop file from the registry link below
 2. Add a new entry **at the top** of the Entries section (reverse chronological — newest first)
-3. Update the **Status**, **Last Update** date, and **Owner/Blocker** in the registry table below to match
+3. Update **P**, **Status**, **Last Update**, and **Owner/Blocker** in the registry table below to match
 
 **Status definitions:**
 
@@ -24,9 +25,13 @@ Loops are open conversation threads or action items where you have been pulled i
 | `Waiting` | You acted, now waiting on someone else |
 | `Closed` | Resolved, no further action needed |
 
+**Priority (P column):** 🔴 needs attention now · 🟡 open/follow-up needed · ⚪ parked, no action now · 🟢 resolved (Closed table only)
+
+**Registry sort order:** 🔴 first, then 🟡, then ⚪. Sort by priority, not chronologically.
+
 **Closing a loop:**
 
-- Change status to `Closed` in the registry table and in the loop file header
+- Change status to `Closed` and P to 🟢 in both the registry table and the loop file header
 - Add a final entry in the loop file with the resolution
 - Move the row from Open/Waiting table to the Closed table
 - Loops are never deleted — they serve as a record
@@ -42,19 +47,19 @@ Loops are open conversation threads or action items where you have been pulled i
 
 ### Open / Waiting
 
-| # | Loop | Status | Opened | Last Update | Owner/Blocker | Squad |
-|---|------|--------|--------|-------------|---------------|-------|
+| # | P | Loop | Status | Opened | Last Update | Owner/Blocker | Squad |
+|---|---|------|--------|--------|-------------|---------------|-------|
 
 ### Closed
 
-| # | Loop | Status | Opened | Closed | Resolution |
-|---|------|--------|--------|--------|------------|
+| # | P | Loop | Status | Opened | Closed | Resolution |
+|---|---|------|--------|--------|--------|------------|
 
 ---
 
 ## Keywords Index
 
-Quick-reference for searching Slack threads and linking to loops.
+Quick-reference for searching threads and linking to loops.
 
 | # | Keywords |
 |---|----------|

@@ -67,43 +67,14 @@ A conversation starts Monday in one channel, moves to a DM on Wednesday, and lan
 
 ## Getting Started
 
-### 1. Clone the repository
+**Prerequisites:** [Claude Code](https://claude.ai/code) (or Claude with tool use) and an MCP server for your communication tool (Slack, Teams, etc.) already configured.
 
-```bash
-git clone <repo-url>
-cd loops
-```
+1. **Clone this repo** and open it in your workspace
+2. **Read [SETUP.md](SETUP.md)** — one-time configuration: choose where to place files, auto-discover your Slack channels, set up scan sources
+3. **Open your first loop** — paste a conversation or run a bulk scan to populate existing threads
+4. **Use [LOOPS.md](LOOPS.md) daily** — your registry of all open, waiting, and closed loops
 
-Open the repository in your Claude Code workspace.
-
-### 2. Integrate your communication tool via MCP
-
-Loops is designed around MCP (Model Context Protocol) tool integrations so Claude can read your actual conversations.
-
-**Slack** is the primary and most common integration:
-- Install the [Slack MCP server](https://github.com/modelcontextprotocol/servers)
-- Configure it in your Claude Code MCP settings
-- Claude can now read Slack threads directly when you ask it to open or update a loop
-
-**Other integrations also work:**
-- **Jira MCP** - for teams where work discussions happen in Jira comments or linked tickets
-- **Linear MCP** - for product teams tracking work in Linear issues and comments
-- **Other messengers** - any tool with an MCP server (Teams, Discord, etc.) follows the same pattern
-
-You don't need all of them. Start with the one tool where most of your loops originate.
-
-### 3. Open your first loop
-
-In your first Claude Code session, paste a real Slack conversation (or ticket thread) and prompt Claude to open a loop from it:
-
-> "Here's a Slack thread I'm involved in. Please open a loop for it."
-
-Claude will:
-1. Create `L01` - your first loop file in `/Loops/`
-2. Add it to the registry in `LOOPS.md` with status `Open` or `Waiting`
-3. Generate keywords automatically based on the conversation content
-
-You can - and should - refine the keywords in the `Keywords Index` section of `LOOPS.md` to make future searches more accurate.
+Setup takes about 15 minutes. After that, Loops runs from LOOPS.md with near-zero overhead.
 
 ---
 
@@ -117,8 +88,19 @@ Every loop has three states:
 | `Waiting` | You acted, now waiting on someone else |
 | `Closed` | Resolved, no further action needed |
 
+Loops also carry a **priority**:
+
+| Priority | Meaning |
+|----------|---------|
+| 🔴 | Needs attention now |
+| 🟡 | Open / follow-up needed |
+| ⚪ | Parked, no action now |
+| 🟢 | Resolved (Closed table) |
+
+The registry is sorted by priority (🔴 first), not by date.
+
 Loops are tracked in `LOOPS.md` - a registry table that stays up to date as conversations evolve. Each loop also has its own file in `/Loops/` with a full entry history, so you can see how a thread progressed from start to resolution.
 
 Loops are numbered per month: `YY-MM L01`, `YY-MM L02`, and so on. The counter resets each month. Closed loops are never deleted - they're moved to the Closed table and kept as a permanent record.
 
-For the full working rules, see [LOOPS.md](LOOPS.md).
+For the full working rules, see [LOOPS.md](LOOPS.md). For initial setup, see [SETUP.md](SETUP.md).
