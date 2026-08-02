@@ -17,9 +17,10 @@ Copy these into your memory directory (for Claude Code: `~/.claude/projects/<pro
 
 ## Schema notes
 
-- Every memory file has frontmatter: `name`, `description`, `type`.
+- Every memory file has frontmatter: `name` (a short kebab-case slug), `description`, and `metadata.type` (one of `user`, `feedback`, `project`, `reference`). The harness reads `metadata.type` for recall filtering, so keep it nested under `metadata:` — not a top-level `type:` field.
 - `feedback` and `project` types include `**Why:**` and `**How to apply:**` lines below the body. The *why* lets future-you judge edge cases instead of blindly following the rule.
 - `user` and `reference` types use a single body paragraph plus optional `**Why it matters:**` for reference.
+- Link related memories with `[[their-slug]]` where relevant. A link that doesn't match an existing file yet is fine — it marks something worth writing later, not an error.
 - The `MEMORY.md` index is one line per file, under ~150 chars. It is loaded into context every session, so keep it lean.
 
 ## What not to save
