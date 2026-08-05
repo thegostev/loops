@@ -17,6 +17,8 @@
 2. Add a new entry **at the top** of the Entries section (reverse chronological — newest first)
 3. Update **P**, **Status**, **Last Update**, and **Owner/Blocker** in the registry table below to match
 
+**Keywords index:** when you create or update a loop, add or refresh its row in the Keywords Index (keywords → loop ID link) so the index stays a working cross-reference, not a flat list.
+
 **Status definitions:**
 
 | Status | Meaning |
@@ -28,6 +30,12 @@
 **Priority (P column):** 🔴 needs attention now · 🟡 open/follow-up needed · ⚪ parked, no action now · 🟢 resolved (Closed table only)
 
 **Registry sort order:** 🔴 first, then 🟡, then ⚪. Sort by priority, not chronologically.
+
+**Staleness & escalation:**
+
+- A `Waiting` loop with no new entry for **3+ days** auto-escalates to 🔴 on the next scan — the follow-up you promised is slipping.
+- An `Open` loop untouched for **5+ days** drops to 🟡 until you re-confirm it's still active.
+- `loop-lint` flags any loop crossing these thresholds so nothing ages silently. Escalation changes P only; it never closes a loop for you.
 
 **Closing a loop:**
 
@@ -59,7 +67,7 @@
 
 ## Keywords Index
 
-Quick-reference for searching threads and linking to loops.
+Quick-reference for finding a loop by topic. Each row links keywords to its loop so you can locate a thread without grepping every file. The scan and loop-memory-bridge skills keep this in sync as loops are created and updated.
 
-| # | Keywords |
-|---|----------|
+| Keywords | Loop |
+|----------|------|
