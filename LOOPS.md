@@ -29,6 +29,12 @@
 
 **Registry sort order:** 🔴 first, then 🟡, then ⚪. Sort by priority, not chronologically.
 
+**Staleness & escalation:**
+
+- A `Waiting` loop with no new entry for **3+ days** auto-escalates to 🔴 on the next scan — the follow-up you promised is slipping.
+- An `Open` loop untouched for **5+ days** drops to 🟡 until you re-confirm it's still active.
+- `loop-lint` flags any loop crossing these thresholds so nothing ages silently. Escalation changes P only; it never closes a loop for you.
+
 **Closing a loop:**
 
 - Change status to `Closed` and P to 🟢 in both the registry table and the loop file header
