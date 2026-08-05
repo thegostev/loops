@@ -17,6 +17,8 @@
 2. Add a new entry **at the top** of the Entries section (reverse chronological — newest first)
 3. Update **P**, **Status**, **Last Update**, and **Owner/Blocker** in the registry table below to match
 
+**Keywords index:** when you create or update a loop, add or refresh its row in the Keywords Index (keywords → loop ID link) so the index stays a working cross-reference, not a flat list.
+
 **Status definitions:**
 
 | Status | Meaning |
@@ -65,7 +67,7 @@
 
 ## Keywords Index
 
-Quick-reference for searching threads and linking to loops.
+Quick-reference for finding a loop by topic. Each row links keywords to its loop so you can locate a thread without grepping every file. The scan and loop-memory-bridge skills keep this in sync as loops are created and updated.
 
-| # | Keywords |
-|---|----------|
+| Keywords | Loop |
+|----------|------|
