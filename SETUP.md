@@ -193,7 +193,7 @@ If you track loops across multiple teams, define squad names for the registry's 
 
 ### Loop file template
 
-Each loop file follows this structure:
+Copy `templates/loop.md` from this repo to your Loops location as the starting point for each loop file. The structure:
 
 ```markdown
 # Loop Title
