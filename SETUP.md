@@ -166,6 +166,7 @@ If your Claude Code setup supports custom skills/commands, you can automate peri
 4. For each finding: create a new loop, update an existing loop, or skip noise
 5. Update the LOOPS.md registry (sorted by priority: 🔴 → 🟡 → ⚪)
 6. Update the `Last scanned` timestamp in LOOPS.md
+7. Build a {Slack thread permalink → loop ID} map from existing loop files in `/Loops/`; never create a second loop for a thread whose permalink is already mapped — the permalink is the dedup key.
 
 Without a skill, you can do this manually by asking Claude to scan your channels.
 
@@ -192,7 +193,7 @@ If you track loops across multiple teams, define squad names for the registry's 
 
 ### Loop file template
 
-Each loop file follows this structure:
+Copy `templates/loop.md` from this repo to your Loops location as the starting point for each loop file. The structure:
 
 ```markdown
 # Loop Title
@@ -203,7 +204,7 @@ Each loop file follows this structure:
 > **Last Update:** YY-MM-DD
 > **Squad:** Team Name
 > **Jira:** [TICKET-ID](url) _(optional)_
-> **Slack:** [Thread](url) _(optional)_
+> **Slack:** [Thread](url) _(required — dedup key)_
 > **People:** Person A., Person B.
 > **Keywords:** keyword1, keyword2, keyword3
 
