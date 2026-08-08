@@ -1,7 +1,8 @@
 # Loops
 
 > **Last scanned:** _not yet scanned_
-> **Scan config:** [[slack-sources]]
+> **Last bridged:** _not yet bridged_
+> **Scan config:** [slack-sources](slack-sources.md)
 
 ## Rules
 
