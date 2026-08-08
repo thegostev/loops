@@ -42,7 +42,7 @@ Loops relies on MCP (Model Context Protocol) to read your conversations. You sho
 
 Verify by asking Claude to search a channel you're active in. If it works, you're good.
 
-**Supported tools:** Slack (primary), Teams, Discord, or any messenger with an MCP server. Loops also works with Jira MCP and Linear MCP for teams where discussions happen in tickets.
+**Supported tools:** Slack is the primary, fully-supported tool — every scan example in this guide uses Slack's search syntax. Teams, Discord, or any messenger with an MCP server also work, but you must adapt the search operators to your MCP's API (the `to:`/`from:`/`channel_types:` operators below are Slack-specific). Loops also works with Jira MCP and Linear MCP where discussions happen in tickets.
 
 ---
 
@@ -144,6 +144,16 @@ People in group DMs — search with `channel_types: "mpim"`:
 - Group DMs have no channel names — search by participant with `channel_types: "mpim"`
 - Always append `after:YYYY-MM-DD` using the `Last scanned` date from LOOPS.md
 ```
+
+### Other messengers (Teams, Discord, Linear, Jira)
+
+The scan config format above is Slack-shaped. For other tools, keep the same batch structure but replace the search syntax:
+
+- **Teams** — use your Teams MCP's message search by participant/channel; there is no `to:`/`from:` equivalent, so filter results in the triage step.
+- **Discord** — search per channel by mentions of your user ID; group DMs map to group channels.
+- **Linear / Jira** — treat each ticket/comment thread as a "thread"; the dedup key is the ticket URL instead of a Slack permalink.
+
+The `slack-sources.md` filename is a convention — rename it `sources.md` if you track multiple tools.
 
 ### Why batches?
 
