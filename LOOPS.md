@@ -50,6 +50,16 @@
 - Loops are numbered sequentially per month: `YY-MM L01`, `YY-MM L02`, etc.
 - The counter resets each month
 
+**Archive rotation:**
+
+- At month end, move Closed rows into a monthly archive file `LOOPS-archive-YY-MM.md` (same Closed table format). LOOPS.md's Closed table keeps only the current month's closures plus a one-line pointer to recent archives.
+- Closed loop files stay in `/Loops/` permanently — they are never deleted.
+
+**Month-boundary behavior:**
+
+- An open loop keeps its original ID across the month boundary: a `26-07 L03` still open in August stays `26-07 L03`. IDs are never renumbered.
+- The sequential counter starts fresh at `L01` for the first new loop opened in each month.
+
 ---
 
 ## Loop Registry
